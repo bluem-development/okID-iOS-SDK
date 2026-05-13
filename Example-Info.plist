@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- ============================================ -->
+    <!-- NFC CONFIGURATION (Add to your host app)     -->
+    <!-- ============================================ -->
+    
+    <!-- Required: Explanation shown to user when requesting NFC access -->
+    <key>NFCReaderUsageDescription</key>
+    <string>This app needs NFC to read passport data for identity verification</string>
+    
+    <!-- Required: ISO7816 application identifiers for passport chip reading -->
+    <key>com.apple.developer.nfc.readersession.iso7816.select-identifiers</key>
+    <array>
+        <string>A0000002471001</string>  <!-- eMRTD application -->
+        <string>A0000002472001</string>  <!-- Additional passport ID -->
+    </array>
+    
+    <!-- ============================================ -->
+    <!-- CAMERA CONFIGURATION (Also required)         -->
+    <!-- ============================================ -->
+    
+    <!-- Required: For MRZ scanning and photo capture -->
+    <key>NSCameraUsageDescription</key>
+    <string>Camera is needed to scan passport MRZ and capture identity photos</string>
+</dict>
+</plist>
+
